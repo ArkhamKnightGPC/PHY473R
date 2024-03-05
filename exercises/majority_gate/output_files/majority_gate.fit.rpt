@@ -1,5 +1,5 @@
 Fitter report for majority_gate
-Tue Mar  5 23:03:01 2024
+Tue Mar  5 23:15:04 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar  5 23:03:01 2024          ;
+; Fitter Status                      ; Successful - Tue Mar  5 23:15:04 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; majority_gate                                  ;
 ; Top-level Entity Name              ; majority_gate                                  ;
@@ -152,7 +152,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.2%      ;
+;     Processors 2-8         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -194,7 +194,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/gabriel/Documentos/X/2A/P3/PHY473R/projects/output_files/majority_gate.pin.
+The pin-out file can be found in /home/gabriel/Documentos/X/2A/P3/PHY473R/exercises/majority_gate/output_files/majority_gate.pin.
 
 
 +-------------------------------------------------------------------+
@@ -818,23 +818,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file /home/gabriel/Documentos/X/2A/P3/PHY473R/projects/output_files/majority_gate.fit.smsg
+Info (144001): Generated suppressed messages file /home/gabriel/Documentos/X/2A/P3/PHY473R/exercises/majority_gate/output_files/majority_gate.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1252 megabytes
-    Info: Processing ended: Tue Mar  5 23:03:01 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 1253 megabytes
+    Info: Processing ended: Tue Mar  5 23:15:04 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/gabriel/Documentos/X/2A/P3/PHY473R/projects/output_files/majority_gate.fit.smsg.
+The suppressed messages can be found in /home/gabriel/Documentos/X/2A/P3/PHY473R/exercises/majority_gate/output_files/majority_gate.fit.smsg.
 
 

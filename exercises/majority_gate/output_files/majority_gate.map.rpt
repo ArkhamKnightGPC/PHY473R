@@ -1,5 +1,5 @@
 Analysis & Synthesis report for majority_gate
-Tue Mar  5 23:03:21 2024
+Tue Mar  5 23:15:00 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar  5 23:03:21 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar  5 23:15:00 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; majority_gate                                  ;
 ; Top-level Entity Name              ; majority_gate                                  ;
@@ -165,13 +165,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; majority_gate.vhd                ; yes             ; User VHDL File  ; /home/gabriel/Documentos/X/2A/P3/PHY473R/projects/majority_gate.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; majority_gate.vhd                ; yes             ; User VHDL File  ; /home/gabriel/Documentos/X/2A/P3/PHY473R/exercises/majority_gate/majority_gate.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -261,13 +261,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Mar  5 23:03:11 2024
+    Info: Processing started: Tue Mar  5 23:14:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off majority_gate -c majority_gate
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file majority_gate.vhd
-    Info (12022): Found design unit 1: majority_gate-dataflow File: /home/gabriel/Documentos/X/2A/P3/PHY473R/projects/majority_gate.vhd Line: 9
-    Info (12023): Found entity 1: majority_gate File: /home/gabriel/Documentos/X/2A/P3/PHY473R/projects/majority_gate.vhd Line: 4
+    Info (12022): Found design unit 1: majority_gate-dataflow File: /home/gabriel/Documentos/X/2A/P3/PHY473R/exercises/majority_gate/majority_gate.vhd Line: 9
+    Info (12023): Found entity 1: majority_gate File: /home/gabriel/Documentos/X/2A/P3/PHY473R/exercises/majority_gate/majority_gate.vhd Line: 4
 Info (12021): Found 0 design units, including 0 entities, in source file majority_gate_tb.vhd
 Info (12127): Elaborating entity "majority_gate" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
@@ -278,9 +278,9 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 451 megabytes
-    Info: Processing ended: Tue Mar  5 23:03:21 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 454 megabytes
+    Info: Processing ended: Tue Mar  5 23:15:00 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:28
 
 

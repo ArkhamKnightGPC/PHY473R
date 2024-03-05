@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
 
--- DATE "03/05/2024 23:03:07"
+-- DATE "03/05/2024 23:15:11"
 
 -- 
 -- Device: Altera EP4CE6E22C6 Package TQFP144
@@ -80,7 +80,7 @@ ENTITY 	majority_gate IS
 	a : IN std_logic;
 	b : IN std_logic;
 	c : IN std_logic;
-	output : OUT std_logic
+	output : BUFFER std_logic
 	);
 END majority_gate;
 
