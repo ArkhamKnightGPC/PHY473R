@@ -1,0 +1,37 @@
+#============================================================
+# GPIO, GPIO connect to DC2 - 2M Pixel Camera
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_PIXLCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_XCLKIN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_LVAL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_FVAL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DC2_SDATA
+
+set_location_assignment PIN_AB22 -to DC2_D[0]
+set_location_assignment PIN_AC15 -to DC2_D[1]
+set_location_assignment PIN_AB21 -to DC2_D[2]
+set_location_assignment PIN_Y17  -to DC2_D[3]
+set_location_assignment PIN_AC21 -to DC2_D[4]
+set_location_assignment PIN_Y16  -to DC2_D[5]
+set_location_assignment PIN_AD21 -to DC2_D[6]
+set_location_assignment PIN_AE16 -to DC2_D[7]
+set_location_assignment PIN_AD15 -to DC2_D[8]
+set_location_assignment PIN_AE15 -to DC2_D[9]
+set_location_assignment PIN_AC19 -to DC2_PIXLCLK
+set_location_assignment PIN_AF16 -to DC2_XCLKIN
+set_location_assignment PIN_AD19 -to DC2_LVAL
+set_location_assignment PIN_AF15 -to DC2_FVAL
+set_location_assignment PIN_AF24 -to DC2_SCLK
+set_location_assignment PIN_AE21 -to DC2_SDATA
+

@@ -1,3 +1,3 @@
 # PHY473R
 
-Assignments from the FPGA lab course at École polytechnique.
+Project from the FPGA lab course **PHY473R** at École polytechnique.
