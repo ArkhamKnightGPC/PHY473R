@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcd_test
-Fri Mar 29 00:55:02 2024
+Fri Mar 29 01:19:39 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -46,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 29 00:55:02 2024          ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 29 01:19:39 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; lcd_test                                       ;
 ; Top-level Entity Name              ; lcd_test                                       ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 73                                             ;
-;     Total combinational functions  ; 66                                             ;
-;     Dedicated logic registers      ; 36                                             ;
-; Total registers                    ; 36                                             ;
-; Total pins                         ; 18                                             ;
+; Total logic elements               ; 82                                             ;
+;     Total combinational functions  ; 75                                             ;
+;     Dedicated logic registers      ; 42                                             ;
+; Total registers                    ; 42                                             ;
+; Total pins                         ; 32                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -182,30 +182,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 73             ;
+; Estimated Total logic elements              ; 82             ;
 ;                                             ;                ;
-; Total combinational functions               ; 66             ;
+; Total combinational functions               ; 75             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 38             ;
+;     -- 4 input functions                    ; 41             ;
 ;     -- 3 input functions                    ; 5              ;
-;     -- <=2 input functions                  ; 23             ;
+;     -- <=2 input functions                  ; 29             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 51             ;
-;     -- arithmetic mode                      ; 15             ;
+;     -- normal mode                          ; 54             ;
+;     -- arithmetic mode                      ; 21             ;
 ;                                             ;                ;
-; Total registers                             ; 36             ;
-;     -- Dedicated logic registers            ; 36             ;
+; Total registers                             ; 42             ;
+;     -- Dedicated logic registers            ; 42             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 18             ;
+; I/O pins                                    ; 32             ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 36             ;
-; Total fan-out                               ; 346            ;
-; Average fan-out                             ; 2.51           ;
+; Maximum fan-out                             ; 42             ;
+; Total fan-out                               ; 402            ;
+; Average fan-out                             ; 2.22           ;
 +---------------------------------------------+----------------+
 
 
@@ -214,8 +214,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
-; |lcd_test                  ; 66 (0)              ; 36 (0)                    ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |lcd_test                ; lcd_test    ; work         ;
-;    |lcd_display:G1|        ; 66 (66)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lcd_test|lcd_display:G1 ; lcd_display ; work         ;
+; |lcd_test                  ; 75 (0)              ; 42 (0)                    ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |lcd_test                ; lcd_test    ; work         ;
+;    |lcd_display:G1|        ; 75 (75)             ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lcd_test|lcd_display:G1 ; lcd_display ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -228,23 +228,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lcd_display:G1|lcd_rw                            ; Stuck at GND due to stuck port data_in                   ;
 ; lcd_display:G1|ch[0]                             ; Stuck at GND due to stuck port data_in                   ;
 ; lcd_display:G1|lcd_data[7]                       ; Stuck at GND due to stuck port data_in                   ;
-; lcd_display:G1|\write_char_on_lcd:time_count[15] ; Merged with lcd_display:G1|\get_next_char:time_count[15] ;
-; lcd_display:G1|\write_char_on_lcd:time_count[14] ; Merged with lcd_display:G1|\get_next_char:time_count[14] ;
-; lcd_display:G1|\write_char_on_lcd:time_count[9]  ; Merged with lcd_display:G1|\get_next_char:time_count[9]  ;
-; lcd_display:G1|\write_char_on_lcd:time_count[8]  ; Merged with lcd_display:G1|\get_next_char:time_count[8]  ;
-; lcd_display:G1|\write_char_on_lcd:time_count[6]  ; Merged with lcd_display:G1|\get_next_char:time_count[6]  ;
-; lcd_display:G1|\write_char_on_lcd:time_count[4]  ; Merged with lcd_display:G1|\get_next_char:time_count[4]  ;
+; lcd_display:G1|\write_char_on_lcd:time_count[21] ; Merged with lcd_display:G1|\get_next_char:time_count[21] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[18] ; Merged with lcd_display:G1|\get_next_char:time_count[18] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[17] ; Merged with lcd_display:G1|\get_next_char:time_count[17] ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[13] ; Merged with lcd_display:G1|\get_next_char:time_count[13] ;
-; lcd_display:G1|\write_char_on_lcd:time_count[12] ; Merged with lcd_display:G1|\get_next_char:time_count[12] ;
-; lcd_display:G1|\write_char_on_lcd:time_count[11] ; Merged with lcd_display:G1|\get_next_char:time_count[11] ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[10] ; Merged with lcd_display:G1|\get_next_char:time_count[10] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[8]  ; Merged with lcd_display:G1|\get_next_char:time_count[8]  ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[7]  ; Merged with lcd_display:G1|\get_next_char:time_count[7]  ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[5]  ; Merged with lcd_display:G1|\get_next_char:time_count[5]  ;
+; lcd_display:G1|\write_char_on_lcd:time_count[20] ; Merged with lcd_display:G1|\get_next_char:time_count[20] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[19] ; Merged with lcd_display:G1|\get_next_char:time_count[19] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[16] ; Merged with lcd_display:G1|\get_next_char:time_count[16] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[15] ; Merged with lcd_display:G1|\get_next_char:time_count[15] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[14] ; Merged with lcd_display:G1|\get_next_char:time_count[14] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[12] ; Merged with lcd_display:G1|\get_next_char:time_count[12] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[11] ; Merged with lcd_display:G1|\get_next_char:time_count[11] ;
+; lcd_display:G1|\write_char_on_lcd:time_count[9]  ; Merged with lcd_display:G1|\get_next_char:time_count[9]  ;
+; lcd_display:G1|\write_char_on_lcd:time_count[6]  ; Merged with lcd_display:G1|\get_next_char:time_count[6]  ;
+; lcd_display:G1|\write_char_on_lcd:time_count[4]  ; Merged with lcd_display:G1|\get_next_char:time_count[4]  ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[3]  ; Merged with lcd_display:G1|\get_next_char:time_count[3]  ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[2]  ; Merged with lcd_display:G1|\get_next_char:time_count[2]  ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[1]  ; Merged with lcd_display:G1|\get_next_char:time_count[1]  ;
 ; lcd_display:G1|\write_char_on_lcd:time_count[0]  ; Merged with lcd_display:G1|\get_next_char:time_count[0]  ;
-; Total Number of Removed Registers = 19           ;                                                          ;
+; Total Number of Removed Registers = 25           ;                                                          ;
 +--------------------------------------------------+----------------------------------------------------------+
 
 
@@ -263,8 +269,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 36    ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Total registers                              ; 42    ;
+; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -278,7 +284,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lcd_test|lcd_display:G1|\get_next_char:time_count[11] ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |lcd_test|lcd_display:G1|\get_next_char:time_count[14] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lcd_test|lcd_display:G1|\get_next_char:count[0]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
@@ -288,23 +294,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 18                          ;
-; cycloneiii_ff         ; 36                          ;
+; boundary_port         ; 32                          ;
+; cycloneiii_ff         ; 42                          ;
 ;     ENA               ; 19                          ;
-;     SCLR              ; 16                          ;
+;     SCLR              ; 22                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 68                          ;
-;     arith             ; 15                          ;
-;         2 data inputs ; 15                          ;
-;     normal            ; 53                          ;
+; cycloneiii_lcell_comb ; 77                          ;
+;     arith             ; 21                          ;
+;         2 data inputs ; 21                          ;
+;     normal            ; 56                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 7                           ;
 ;         3 data inputs ; 5                           ;
-;         4 data inputs ; 38                          ;
+;         4 data inputs ; 41                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.37                        ;
+; Average LUT depth     ; 2.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -323,7 +329,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Mar 29 00:54:52 2024
+    Info: Processing started: Fri Mar 29 01:19:28 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_test -c lcd_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -343,16 +349,30 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
-Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[10]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[11]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[12]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[13]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[14]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[15]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[16]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[17]" File: /home/gabriel/Documentos/X/2A/P3/PHY473R/experiments/LCD_test/lcd_test.vhd Line: 9
+Info (21057): Implemented 115 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 74 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 467 megabytes
-    Info: Processing ended: Fri Mar 29 00:55:02 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21061): Implemented 83 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 470 megabytes
+    Info: Processing ended: Fri Mar 29 01:19:39 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:29
 
 

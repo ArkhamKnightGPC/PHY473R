@@ -68,7 +68,7 @@ architecture lcd_display_arch of lcd_display is
 	constant APO:	 charcode := "00100111";	-- Apostrophe
 	
 	--give LCD time to process the whole message (1ms relative to CLOCK_50)
-	constant CLOCK_COUNT : integer := 50000;
+	constant CLOCK_COUNT : integer := 50000*50;
 	
 	-- store message during processing by lcd display
 	signal lcd_message: lcd_bus_data;

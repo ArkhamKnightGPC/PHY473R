@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity lcd_test is
 	port(
 		CLOCK_50	: in 	std_logic;
-		KEY		: in	std_logic_vector(3 downto 0);
+		SW			: in	std_logic_vector(17 downto 0);
 		LCD_DATA : out std_logic_vector(7 downto 0);
 		LCD_EN	: out std_logic;
 		LCD_RW	: out std_logic;
@@ -34,8 +34,8 @@ begin
 
 	G1: lcd_display port map(
 		clock				=> CLOCK_50,
-		reset				=> KEY(0),
-		message_select => KEY(2 downto 1),
+		reset				=> SW(0),
+		message_select => SW(2 downto 1),
 		lcd_on 			=> LCD_ON,
 		lcd_blon 		=> LCD_BLON,
 		lcd_data 		=> LCD_DATA,
