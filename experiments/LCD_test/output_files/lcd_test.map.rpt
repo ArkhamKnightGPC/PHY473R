@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcd_test
-Fri Mar 29 01:19:39 2024
+Fri Mar 29 01:27:45 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 29 01:19:39 2024          ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 29 01:27:45 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; lcd_test                                       ;
 ; Top-level Entity Name              ; lcd_test                                       ;
@@ -162,8 +162,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-8         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -329,7 +328,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Mar 29 01:19:28 2024
+    Info: Processing started: Fri Mar 29 01:27:34 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_test -c lcd_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -370,9 +369,9 @@ Info (21057): Implemented 115 device resources after synthesis - the final resou
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 83 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 470 megabytes
-    Info: Processing ended: Fri Mar 29 01:19:39 2024
+    Info: Peak virtual memory: 461 megabytes
+    Info: Processing ended: Fri Mar 29 01:27:45 2024
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:28
 
 

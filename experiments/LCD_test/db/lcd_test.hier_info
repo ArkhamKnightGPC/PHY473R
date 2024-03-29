@@ -18,19 +18,19 @@ SW[14] => ~NO_FANOUT~
 SW[15] => ~NO_FANOUT~
 SW[16] => ~NO_FANOUT~
 SW[17] => ~NO_FANOUT~
-LCD_DATA[0] <= lcd_display:G1.lcd_data[0]
-LCD_DATA[1] <= lcd_display:G1.lcd_data[1]
-LCD_DATA[2] <= lcd_display:G1.lcd_data[2]
-LCD_DATA[3] <= lcd_display:G1.lcd_data[3]
-LCD_DATA[4] <= lcd_display:G1.lcd_data[4]
-LCD_DATA[5] <= lcd_display:G1.lcd_data[5]
-LCD_DATA[6] <= lcd_display:G1.lcd_data[6]
-LCD_DATA[7] <= lcd_display:G1.lcd_data[7]
-LCD_EN <= lcd_display:G1.lcd_enable
-LCD_RW <= lcd_display:G1.lcd_rw
-LCD_RS <= lcd_display:G1.lcd_rs
-LCD_BLON <= lcd_display:G1.lcd_blon
-LCD_ON <= lcd_display:G1.lcd_on
+LCD_DATA[0] << lcd_display:G1.lcd_data[0]
+LCD_DATA[1] << lcd_display:G1.lcd_data[1]
+LCD_DATA[2] << lcd_display:G1.lcd_data[2]
+LCD_DATA[3] << lcd_display:G1.lcd_data[3]
+LCD_DATA[4] << lcd_display:G1.lcd_data[4]
+LCD_DATA[5] << lcd_display:G1.lcd_data[5]
+LCD_DATA[6] << lcd_display:G1.lcd_data[6]
+LCD_DATA[7] << lcd_display:G1.lcd_data[7]
+LCD_EN << lcd_display:G1.lcd_enable
+LCD_RW << lcd_display:G1.lcd_rw
+LCD_RS << lcd_display:G1.lcd_rs
+LCD_BLON << lcd_display:G1.lcd_blon
+LCD_ON << lcd_display:G1.lcd_on
 
 
 |lcd_test|lcd_display:G1
