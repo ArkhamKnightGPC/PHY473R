@@ -11,39 +11,36 @@ entity lcd_test is
 		LCD_EN	: out std_logic;
 		LCD_RW	: out std_logic;
 		LCD_RS	: out std_logic;
+		LCD_BLON	: out std_logic;
 		LCD_ON	: out std_logic
 	);
 end lcd_test;
 
 architecture lcd_test_arch of lcd_test is
 
-		type StateType is (STATE_A, STATE_B);
-		signal CurrentState, NextState : StateType;
+	component lcd_display is port(
+		clock				: in	std_logic;
+		reset				: in	std_logic;
+		message_select	: in 	std_logic_vector(1 downto 0);
+		lcd_on			: out std_logic;
+		lcd_blon			: out std_logic;
+		lcd_data			: out	std_logic_vector(7 downto 0);
+		lcd_rs			: out std_logic;
+		lcd_rw			: out std_logic;
+		lcd_enable		: out std_logic);
+	end component;
 
 begin
-	LCD_ON <= '1';
-	LCD_EN <= '1';
-	
-	LCD_RW <= '0'; --we write data to the LCD
-	
-	process(CLOCK_50)
-	begin
-		if rising_edge(CLOCK_50) then
-			if KEY(0) = '0' then --button is pressed
-				CurrentState <= STATE_A; --initialize state machine
-			elsif rising_edge(CLOCK_50) then
-				CurrentState <= Next_State; --state transition logic
-			end if;
-		end if;
-	end process;
-	
-	process(CurrentState)
-	begin
-		case CurrentState is
-			when STATE_A =>
-					LCD_RS <= '1'; --send character data to LCD
-			when STATE_B =>
-		end case;LCD_RS
-	end process;
-	
+
+	G1: lcd_display port map(
+		clock				=> CLOCK_50,
+		reset				=> KEY(0),
+		message_select => KEY(2 downto 1),
+		lcd_on 			=> LCD_ON,
+		lcd_blon 		=> LCD_BLON,
+		lcd_data 		=> LCD_DATA,
+		lcd_rs			=> LCD_RS,
+		lcd_rw			=> LCD_RW,
+		lcd_enable		=>	LCD_EN);
+
 end lcd_test_arch;
