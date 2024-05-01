@@ -1,8 +1,0 @@
-entity lcd_test is
-	port(
-	);
-end lcd_test;
-
-architecture lcd_test_arch of lcd_test is
-begin
-end architecture;
