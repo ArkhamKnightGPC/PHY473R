@@ -1,0 +1,9 @@
+
+State Machine - |digit_detector|digit_detector_control_unit:G1|present_state
+Name present_state.DONE present_state.DETECTION present_state.CONVERT_TO_GRAYSCALE present_state.CONVERT_TO_RGB present_state.TAKING_PHOTO present_state.START 
+present_state.START 0 0 0 0 0 0 
+present_state.TAKING_PHOTO 0 0 0 0 1 1 
+present_state.CONVERT_TO_RGB 0 0 0 1 0 1 
+present_state.CONVERT_TO_GRAYSCALE 0 0 1 0 0 1 
+present_state.DETECTION 0 1 0 0 0 1 
+present_state.DONE 1 0 0 0 0 1 
