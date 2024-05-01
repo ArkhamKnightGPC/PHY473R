@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/gabriel/Documentos/X/2A/fpga/digit_detector/",
+	"acds_version" : "Version 23.1std.0",
+	"platform" : "linux",
+	"os" : "Ubuntu 20.04.6",
+	"qpf" : "digit_detector.qpf"
+}
