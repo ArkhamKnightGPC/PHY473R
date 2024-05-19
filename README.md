@@ -1,8 +1,10 @@
 # Handwritten digit detection on FPGA
 
-The goal of this project is to implement Rosenblatt's perceptron for binary classification of handwritten digits on FPGA using VHDL. The perceptron was trained using the MNIST dataset to classify zeros and ones.
+The goal of this project is to implement Rosenblatt's perceptron for binary classification of handwritten digits on FPGA using VHDL. The project was developed on a **Altera DE2-115** board and includes interfaces with a **VGA monitor**, an **LCD** and a **TRDB-DC2** camera.
 
-The project includes interfaces with a **VGA monitor**, an **LCD** and a **TRDB-DC2** camera.
+The perceptron was trained with Python using the MNIST dataset to classify zeros and ones.
+
+Please check the project's [video demo](https://www.youtube.com/watch?v=SyL3lp6TRCY).
 
 ## User tutorial
 

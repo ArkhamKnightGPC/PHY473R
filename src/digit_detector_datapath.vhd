@@ -67,7 +67,7 @@ architecture rtl of digit_detector_datapath is
 		clock				:	in		std_logic;
 		clock_25			:	in		std_logic;
 		threshold		:	in		std_logic_vector(5 downto 0);
-		state_in					:	in		std_logic_vector(3 downto 0);
+		state_in			:	in		std_logic_vector(3 downto 0);
 		vga_hsync		:	inout	std_logic;
 		vga_vsync		:	inout	std_logic;
 		vga_red			:	out	std_logic_vector(7 downto 0);

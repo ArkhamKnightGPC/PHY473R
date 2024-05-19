@@ -1,5 +1,5 @@
 Timing Analyzer report for digit_detector
-Sun May 19 03:44:24 2024
+Sun May 19 13:57:59 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -117,15 +117,15 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.43        ;
+; Average used               ; 1.42        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  11.8%      ;
-;     Processor 3            ;   9.1%      ;
-;     Processor 4            ;   7.0%      ;
-;     Processors 5-8         ;   3.7%      ;
+;     Processor 2            ;  10.6%      ;
+;     Processor 3            ;   8.9%      ;
+;     Processor 4            ;   6.8%      ;
+;     Processors 5-8         ;   4.0%      ;
 +----------------------------+-------------+
 
 
@@ -791,8 +791,8 @@ No paths to report.
 ; 0.699 ; digit_detector_datapath:G1|camera_interface:G3|cnt[12] ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.043      ; 0.928      ;
 ; 0.699 ; digit_detector_datapath:G1|camera_interface:G3|cnt[14] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.043      ; 0.928      ;
 ; 0.720 ; digit_detector_datapath:G1|camera_interface:G3|cnt[0]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[0]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.043      ; 0.949      ;
-; 1.004 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[4]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.240      ;
 ; 1.004 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[2]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.240      ;
+; 1.004 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[4]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.240      ;
 ; 1.004 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.240      ;
 ; 1.004 ; digit_detector_datapath:G1|camera_interface:G3|cnt[13] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.240      ;
 ; 1.005 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.241      ;
@@ -813,15 +813,15 @@ No paths to report.
 ; 1.024 ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[10]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.260      ;
 ; 1.024 ; digit_detector_datapath:G1|camera_interface:G3|cnt[10] ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.260      ;
 ; 1.024 ; digit_detector_datapath:G1|camera_interface:G3|cnt[12] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.260      ;
-; 1.125 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.361      ;
 ; 1.125 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.361      ;
+; 1.125 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.361      ;
 ; 1.125 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.361      ;
 ; 1.125 ; digit_detector_datapath:G1|camera_interface:G3|cnt[13] ; digit_detector_datapath:G1|camera_interface:G3|cnt[15]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.361      ;
 ; 1.126 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[13]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.362      ;
 ; 1.127 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.363      ;
 ; 1.127 ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[11]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.363      ;
-; 1.130 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.366      ;
 ; 1.130 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[4]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.366      ;
+; 1.130 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.366      ;
 ; 1.130 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.366      ;
 ; 1.131 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.367      ;
 ; 1.132 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[10]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.368      ;
@@ -840,14 +840,14 @@ No paths to report.
 ; 1.150 ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.386      ;
 ; 1.150 ; digit_detector_datapath:G1|camera_interface:G3|cnt[10] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.386      ;
 ; 1.197 ; digit_detector_datapath:G1|camera_interface:G3|cnt[0]  ; digit_detector_datapath:G1|camera_interface:G3|pixel_address[0]  ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.491      ; 1.874      ;
-; 1.251 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.487      ;
 ; 1.251 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.487      ;
+; 1.251 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.487      ;
 ; 1.251 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.487      ;
 ; 1.252 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[15]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.488      ;
 ; 1.253 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[11]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.489      ;
 ; 1.253 ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[13]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.489      ;
-; 1.256 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.492      ;
 ; 1.256 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.492      ;
+; 1.256 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.492      ;
 ; 1.256 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[10]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.492      ;
 ; 1.258 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.494      ;
 ; 1.258 ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.494      ;
@@ -872,8 +872,8 @@ No paths to report.
 ; 1.345 ; digit_detector_datapath:G1|camera_interface:G3|cnt[14] ; digit_detector_datapath:G1|camera_interface:G3|pixel_address[14] ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.492      ; 2.023      ;
 ; 1.359 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|pixel_address[7]  ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.491      ; 2.036      ;
 ; 1.360 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|pixel_address[3]  ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.491      ; 2.037      ;
-; 1.377 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.613      ;
 ; 1.377 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.613      ;
+; 1.377 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.613      ;
 ; 1.377 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[11]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.050      ; 1.613      ;
 +-------+--------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -2239,8 +2239,8 @@ No paths to report.
 ; Slack ; From Node                                              ; To Node                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------+------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.318 ; digit_detector_datapath:G1|camera_interface:G3|cnt[15] ; digit_detector_datapath:G1|camera_interface:G3|cnt[15]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.424      ;
-; 0.319 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.425      ;
 ; 0.319 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.425      ;
 ; 0.319 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.425      ;
 ; 0.319 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[11]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.425      ;
 ; 0.319 ; digit_detector_datapath:G1|camera_interface:G3|cnt[13] ; digit_detector_datapath:G1|camera_interface:G3|cnt[13]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.425      ;
@@ -2254,8 +2254,8 @@ No paths to report.
 ; 0.322 ; digit_detector_datapath:G1|camera_interface:G3|cnt[10] ; digit_detector_datapath:G1|camera_interface:G3|cnt[10]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.428      ;
 ; 0.322 ; digit_detector_datapath:G1|camera_interface:G3|cnt[12] ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.428      ;
 ; 0.331 ; digit_detector_datapath:G1|camera_interface:G3|cnt[0]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[0]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.437      ;
-; 0.468 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[4]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.574      ;
 ; 0.468 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[2]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.574      ;
+; 0.468 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[4]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.574      ;
 ; 0.468 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.574      ;
 ; 0.468 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.574      ;
 ; 0.468 ; digit_detector_datapath:G1|camera_interface:G3|cnt[13] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.574      ;
@@ -2276,15 +2276,15 @@ No paths to report.
 ; 0.482 ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[10]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.588      ;
 ; 0.483 ; digit_detector_datapath:G1|camera_interface:G3|cnt[10] ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.589      ;
 ; 0.483 ; digit_detector_datapath:G1|camera_interface:G3|cnt[12] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.589      ;
-; 0.531 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.637      ;
 ; 0.531 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.637      ;
+; 0.531 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.637      ;
 ; 0.531 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.637      ;
 ; 0.531 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[13]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.637      ;
 ; 0.531 ; digit_detector_datapath:G1|camera_interface:G3|cnt[13] ; digit_detector_datapath:G1|camera_interface:G3|cnt[15]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.637      ;
 ; 0.532 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.638      ;
 ; 0.532 ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[11]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.638      ;
-; 0.534 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.640      ;
 ; 0.534 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[4]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.640      ;
+; 0.534 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.640      ;
 ; 0.534 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.640      ;
 ; 0.534 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.640      ;
 ; 0.535 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[10]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.641      ;
@@ -2306,14 +2306,14 @@ No paths to report.
 ; 0.564 ; digit_detector_datapath:G1|camera_interface:G3|cnt[10] ; digit_detector_datapath:G1|camera_interface:G3|pixel_address[10] ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.166      ; 0.814      ;
 ; 0.566 ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]  ; digit_detector_datapath:G1|camera_interface:G3|pixel_address[8]  ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.166      ; 0.816      ;
 ; 0.566 ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]  ; digit_detector_datapath:G1|camera_interface:G3|pixel_address[9]  ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.166      ; 0.816      ;
-; 0.597 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.703      ;
 ; 0.597 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.703      ;
+; 0.597 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.703      ;
 ; 0.597 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.703      ;
 ; 0.597 ; digit_detector_datapath:G1|camera_interface:G3|cnt[11] ; digit_detector_datapath:G1|camera_interface:G3|cnt[15]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.703      ;
 ; 0.598 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[11]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.704      ;
 ; 0.598 ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[13]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.704      ;
-; 0.600 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.706      ;
 ; 0.600 ; digit_detector_datapath:G1|camera_interface:G3|cnt[1]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[6]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.706      ;
+; 0.600 ; digit_detector_datapath:G1|camera_interface:G3|cnt[3]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[8]            ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.706      ;
 ; 0.600 ; digit_detector_datapath:G1|camera_interface:G3|cnt[5]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[10]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.706      ;
 ; 0.601 ; digit_detector_datapath:G1|camera_interface:G3|cnt[7]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[12]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.707      ;
 ; 0.601 ; digit_detector_datapath:G1|camera_interface:G3|cnt[9]  ; digit_detector_datapath:G1|camera_interface:G3|cnt[14]           ; CMOS_PIXCLK  ; CMOS_PIXCLK ; 0.000        ; 0.022      ; 0.707      ;
@@ -3012,7 +3012,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun May 19 03:44:21 2024
+    Info: Processing started: Sun May 19 13:57:55 2024
 Info: Command: quartus_sta digit_detector -c digit_detector
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -3121,9 +3121,9 @@ Info (332114): Report Metastability: Found 198 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 635 megabytes
-    Info: Processing ended: Sun May 19 03:44:24 2024
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 612 megabytes
+    Info: Processing ended: Sun May 19 13:57:59 2024
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 
