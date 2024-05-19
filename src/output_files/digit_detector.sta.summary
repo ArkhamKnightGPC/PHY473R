@@ -3,31 +3,31 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -8.550
-TNS   : -601.637
+Slack : -10.186
+TNS   : -674.339
 
 Type  : Slow 1200mV 85C Model Setup 'clock_25'
-Slack : -4.827
-TNS   : -2135.509
+Slack : -4.635
+TNS   : -2050.968
 
 Type  : Slow 1200mV 85C Model Setup 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : -4.137
-TNS   : -4.137
+Slack : -3.809
+TNS   : -3.809
 
 Type  : Slow 1200mV 85C Model Setup 'CMOS_PIXCLK'
-Slack : -1.588
-TNS   : -26.292
+Slack : -1.589
+TNS   : -31.748
 
 Type  : Slow 1200mV 85C Model Hold 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : 0.065
+Slack : 0.001
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.381
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock_25'
-Slack : 0.402
+Slack : 0.405
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CMOS_PIXCLK'
@@ -36,7 +36,7 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -202.175
+TNS   : -203.460
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CMOS_PIXCLK'
 Slack : -3.000
@@ -47,35 +47,35 @@ Slack : -2.693
 TNS   : -2291.976
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : 0.421
+Slack : 0.409
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -7.653
-TNS   : -534.701
+Slack : -9.052
+TNS   : -601.565
 
 Type  : Slow 1200mV 0C Model Setup 'clock_25'
-Slack : -4.374
-TNS   : -1907.286
+Slack : -4.178
+TNS   : -1823.978
 
 Type  : Slow 1200mV 0C Model Setup 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : -3.691
-TNS   : -3.691
+Slack : -3.378
+TNS   : -3.378
 
 Type  : Slow 1200mV 0C Model Setup 'CMOS_PIXCLK'
-Slack : -1.313
-TNS   : -20.918
+Slack : -1.400
+TNS   : -26.035
 
 Type  : Slow 1200mV 0C Model Hold 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : 0.096
+Slack : 0.026
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.353
+Slack : 0.352
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock_25'
-Slack : 0.354
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CMOS_PIXCLK'
@@ -84,7 +84,7 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -202.175
+TNS   : -203.460
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CMOS_PIXCLK'
 Slack : -3.000
@@ -95,35 +95,35 @@ Slack : -2.649
 TNS   : -2255.368
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : 0.413
+Slack : 0.380
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -3.864
-TNS   : -225.421
+Slack : -4.684
+TNS   : -261.727
 
 Type  : Fast 1200mV 0C Model Setup 'clock_25'
-Slack : -2.034
-TNS   : -616.148
+Slack : -1.892
+TNS   : -579.374
 
 Type  : Fast 1200mV 0C Model Setup 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : -1.712
-TNS   : -1.712
+Slack : -1.499
+TNS   : -1.499
 
 Type  : Fast 1200mV 0C Model Setup 'CMOS_PIXCLK'
-Slack : -0.264
-TNS   : -1.280
+Slack : -0.329
+TNS   : -1.733
 
 Type  : Fast 1200mV 0C Model Hold 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : 0.000
-TNS   : 0.000
+Slack : -0.021
+TNS   : -0.021
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.032
+Slack : 0.159
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_25'
-Slack : 0.181
+Slack : 0.183
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CMOS_PIXCLK'
@@ -132,18 +132,18 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -202.612
+TNS   : -203.986
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CMOS_PIXCLK'
 Slack : -3.000
-TNS   : -72.457
+TNS   : -70.063
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_25'
 Slack : -1.000
 TNS   : -872.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|LUT_INDEX[0]'
-Slack : 0.459
+Slack : 0.458
 TNS   : 0.000
 
 ------------------------------------------------------------

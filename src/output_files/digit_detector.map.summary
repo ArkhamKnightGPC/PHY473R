@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun May 19 03:16:44 2024
+Analysis & Synthesis Status : Successful - Sun May 19 03:43:25 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : digit_detector
 Top-level Entity Name : digit_detector
 Family : Cyclone IV E
-Total logic elements : 657
-    Total combinational functions : 615
-    Dedicated logic registers : 236
-Total registers : 236
+Total logic elements : 691
+    Total combinational functions : 649
+    Dedicated logic registers : 237
+Total registers : 237
 Total pins : 107
 Total virtual pins : 0
 Total memory bits : 1,572,864

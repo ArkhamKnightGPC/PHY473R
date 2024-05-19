@@ -118,7 +118,7 @@ architecture rtl of digit_detector_datapath is
 	signal address_detection : std_logic_vector(15 downto 0);
 	signal pixel_detection : std_logic_vector(7 downto 0);
 	signal perceptron_weight : std_logic_vector(15 downto 0);
-	signal aux : integer range 0 to 10000000000;
+	signal aux : integer range -10000000000 to 10000000000;
 	signal pixel_detection_black_and_white : integer range 0 to 1;
 	
 	signal lcd_message_select : std_logic_vector(1 downto 0);
