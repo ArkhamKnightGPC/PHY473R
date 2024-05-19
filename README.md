@@ -1,18 +1,36 @@
 # Handwritten digit detection on FPGA
 
-The goal of this project is to explore and implement a machine learning solution for handwritten digit detection of FPGA using VHDL.
+The goal of this project is to implement Rosenblatt's perceptron for binary classification of handwritten digits on FPGA using VHDL. The perceptron was trained using the MNIST dataset to classify zeros and ones.
 
-## State Machine
+The project includes interfaces with a **VGA monitor**, an **LCD** and a **TRDB-DC2** camera.
+
+## User tutorial
+
+The user has several inputs to interact with the circuit:
+
+- KEY(0): *reset* button
+- KEY(1): *take photo* button
+- KEY(2): *start classification* button
+- SW(11 downto 0): *exposition time* switches
+- SW(17 downto 12): *black and white threshold* switches
 
 ![](state_machine.png)
 
-Initially, the system is at the *START* state. To start a run, the user can press the *KEY(1)* button triggering the transition to the *TAKING_PHOTO* state. At this state, we perform of full sweep of the camera frame and write an image to memory. The *TRDB-DC2* camera was used.
+Initially, the system is at the *CONFIG* state. At this state, we configure registers on the camera via the **I2C** communication protocol (set exposition time, image dimensions, etc). **In order to change exposition time, the user must modify switches 0 to 11 and press the reset button in order to commit his changes to the camera's registers**.
 
-Once the full image has been written, we transition to the *CONVERT_TO_RGB* state, where we apply a demosaicing algorithm to convert the image from bayer pattern to RGB. Once the conversion is complete, we transition to the *CONVERT_TO_GRAYSCALE* state, where we convert each pixel in the RGB image to grayscale. The final image is shown on a VGA monitor.
+Then, the system automatically transitions to the *WAIT_PHOTO* state. In the VGA monitor, the user can visualise the image currently stocked in memory.
 
-Finally, we transition to the *DETECTION* state where the system predicts which digit best matches the one in the photo.
+Once the handwritten digit is well positioned on the monitor, the user must press the **KEY(1)** button to move on. From this point on, no further write operations are carried out in the image (in other words, the photo on the screen is now saved in memory).
 
-Once the prediction is done, we wait at the *DONE* state. In order to return to the *START* state, the user must press the *KEY(0)* reset button.
+Then, the system transitions to the *WAIT_DETECTION* state. In this state, the VGA monitor shows the image in *black and white format*. **In order to change the white intensity threshold, the user must modify switches 12 to 17. The digit must be clearly visible on the monitor before continuing.**
+
+<p align="center">
+<img src="example.jpeg" alt="image" width="300" height="400">
+</p>
+
+**If the user is not satisfied with his photo, he can press the reset button to take a new photo. Or if he is satisfied, he must press the KEY(2) button to start classification**. Once classification starts, the system transitions to the *DETECTION* state, where a full sweep of the image RAM and the perceptron RAM will be performed in order to predict the label of the taken photo.
+
+Once the calculation is complete, the system automatically transitions to the *SHOW_RESULT* state. At this state, the LCD displays the detected digit.
 
 ## VHDL design
 

@@ -1,0 +1,14 @@
+
+State Machine - |digit_detector|digit_detector_datapath:G1|camera_interface:G3|I2C_CMOS_Config:G0|mSetup_ST
+Name mSetup_ST.st20_next_data mSetup_ST.st10_wait_ack mSetup_ST.st0_send_data 
+mSetup_ST.st0_send_data 0 0 0 
+mSetup_ST.st10_wait_ack 0 1 1 
+mSetup_ST.st20_next_data 1 0 1 
+
+State Machine - |digit_detector|digit_detector_control_unit:G0|present_state
+Name present_state.SHOW_RESULT present_state.DETECTION present_state.WAIT_DETECTION present_state.WAIT_PHOTO present_state.CONFIG 
+present_state.CONFIG 0 0 0 0 0 
+present_state.WAIT_PHOTO 0 0 0 1 1 
+present_state.WAIT_DETECTION 0 0 1 0 1 
+present_state.DETECTION 0 1 0 0 1 
+present_state.SHOW_RESULT 1 0 0 0 1 

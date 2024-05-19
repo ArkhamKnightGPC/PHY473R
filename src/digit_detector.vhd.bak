@@ -1,0 +1,13 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity digit_detector is port(
+
+);
+end digit_detector;
+
+architecture rtl of digit_detector is
+begin
+end rtl;
