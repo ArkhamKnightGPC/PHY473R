@@ -1,6 +1,7 @@
 import os
 from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Perceptron
 
@@ -53,36 +54,42 @@ def convert_to_twos_complement(value, num_bits):
         value += (1 << num_bits)
     return value
 
-# Define paths
+# Images from the MNIST dataset
 input_folder = "trainingSample"
 output_folder = "trainingSample_resized"
 
-# Preprocess images
+# In our VHDL project, images are 256x256, black/white and mirrored => we must preprocess images!!!
 preprocess_images(input_folder, output_folder)
-
-# Load data
 X, y = load_data(output_folder)
 
-# Split data into training and testing sets
+# 80% train, 20% test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Train perceptron
 perceptron = Perceptron()
 perceptron.fit(X_train, y_train)
 
-# Scale weights and bias to integers
-scaling_factor = 10000  # Adjust this value as needed to preserve precision
+scaling_factor = 10000  #we must use integers for VHDL exportation
 weights_scaled = perceptron.coef_ * scaling_factor
 bias_scaled = perceptron.intercept_ * scaling_factor
 
-# Determine the number of bits needed to represent the weights and bias
-num_bits = 16  # Change this value based on your requirements
+# In order to better visualise the perceptron weights, let's plot them
+matrix = weights_scaled.reshape((256, 256))
 
-# Convert weights and bias to 2's complement representation
+# Create the heatmap and save to an external file
+plt.imshow(matrix, cmap='hot', interpolation='nearest')
+plt.colorbar()
+plt.title('Heatmap of Perceptron Weights')
+plt.savefig('heatmap.png')
+
+# In our VHDL project, we set words in perceptron's RAM as 16 bits
+num_bits = 16
+
+# We use 2's complement to represent signed integers
 weights_twos_complement = [convert_to_twos_complement(int(weight), num_bits) for weight in weights_scaled[0]]
 bias_twos_complement = convert_to_twos_complement(int(bias_scaled[0]), num_bits)
 
-# Write to .mif file
+# We create .mif file to initialize perceptron's RAM in our VHDL project
 with open('0_1.mif', 'w') as f:
     f.write("DEPTH = 65536;\n")
     f.write("WIDTH = {};\n".format(num_bits))
@@ -95,6 +102,6 @@ with open('0_1.mif', 'w') as f:
         f.write("{} : ".format(i) + format(weight, '0{}b'.format(num_bits)) + ";\n")  # Write weights
     f.write("END;\n")
 
-# Evaluate perceptron
+# Let's check our model's accuracy
 accuracy = perceptron.score(X_test, y_test)
 print("Perceptron accuracy:", accuracy)
