@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	/home/gabriel/Documentos/X/2A/P3/PHY473R/src/digit_detector.qarlog
+
+Archive:	/home/gabriel/Documentos/X/2A/P3/PHY473R/src/digit_detector.qar
+Date:		Sat May 25 20:47:16 2024
+Quartus Prime		23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/I2C_CMOS_Config.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/I2C_Controller.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/camera_interface.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/digit_detector.qpf
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/digit_detector.qsf
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/digit_detector.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/digit_detector_control_unit.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/digit_detector_datapath.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/lcd_interface.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/perceptron_weights/0_1.mif
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/ram_image.cmp
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/ram_image.qip
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/ram_image.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/ram_perceptron.cmp
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/ram_perceptron.qip
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/ram_perceptron.vhd
+/home/gabriel/Documentos/X/2A/P3/PHY473R/src/vga_interface.vhd
+/home/gabriel/intelFPGA/23.1std/quartus/linux64/assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
