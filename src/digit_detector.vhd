@@ -76,11 +76,12 @@ architecture rtl of digit_detector is
 		lcd_on					: 	out	std_logic;
 		config_done				:	out	std_logic;
 		detection_done			:	out	std_logic;
-		classification			:	out	std_logic
+		classification			:	out	std_logic_vector(2 downto 0)
 	);
 	end component;
 	
-	signal config_done_internal, detection_done_internal, classification_internal : std_logic;
+	signal config_done_internal, detection_done_internal : std_logic;
+	signal classification_internal: std_logic_vector(2 downto 0);
 	signal state_internal : std_logic_vector(3 downto 0);
 	
 	signal exposition_internal : std_logic_vector(11 downto 0);
@@ -146,7 +147,6 @@ begin
 		LEDG(7) <= detection_done_internal;
 		
 		--at state SHOW_RESULT, we display classification result
-		LEDR(0) <= '1' when (classification_internal='0' and state_internal="0100") else '0';
-		LEDR(1) <= '1' when (classification_internal='1' and state_internal="0100") else '0';
+		LEDR(2 downto 0) <= classification_internal;
 
 end rtl;

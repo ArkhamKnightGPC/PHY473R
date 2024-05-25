@@ -69,7 +69,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 perceptron = Perceptron()
 perceptron.fit(X_train, y_train)
 
-scaling_factor = 10000  #we must use integers for VHDL exportation
+scaling_factor = 5000  #we must use integers for VHDL exportation
 weights_scaled = perceptron.coef_ * scaling_factor
 bias_scaled = perceptron.intercept_ * scaling_factor
 

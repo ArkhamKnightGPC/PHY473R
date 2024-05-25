@@ -1,5 +1,5 @@
 Flow report for digit_detector
-Sun May 19 13:57:59 2024
+Fri May 24 19:37:25 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun May 19 13:57:53 2024          ;
+; Flow Status                        ; Successful - Fri May 24 19:37:20 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; digit_detector                                 ;
 ; Top-level Entity Name              ; digit_detector                                 ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 698 / 114,480 ( < 1 % )                        ;
-;     Total combinational functions  ; 649 / 114,480 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 237 / 114,480 ( < 1 % )                        ;
-; Total registers                    ; 237                                            ;
+; Total logic elements               ; 1,021 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 988 / 114,480 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 300 / 114,480 ( < 1 % )                        ;
+; Total registers                    ; 300                                            ;
 ; Total pins                         ; 107 / 529 ( 20 % )                             ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 1,572,864 / 3,981,312 ( 40 % )                 ;
+; Total memory bits                  ; 3,407,872 / 3,981,312 ( 86 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
 +------------------------------------+------------------------------------------------+
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2024 13:56:35 ;
+; Start date & time ; 05/24/2024 19:35:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; digit_detector      ;
 +-------------------+---------------------+
@@ -76,11 +76,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88798048304305.171611979454942         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 88798048304305.171657215320031         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ram_perceptron01.cmp                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ram_perceptron02.cmp                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ram_perceptron12.cmp                   ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ram_image.cmp                          ; --            ; --          ; --         ;
-; MISC_FILE                           ; ram_perceptron.cmp                     ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -96,11 +98,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 503 MB              ; 00:00:38                           ;
-; Fitter               ; 00:00:53     ; 1.1                     ; 1488 MB             ; 00:01:37                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 380 MB              ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 612 MB              ; 00:00:04                           ;
-; Total                ; 00:01:18     ; --                      ; --                  ; 00:02:23                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 515 MB              ; 00:00:33                           ;
+; Fitter               ; 00:01:04     ; 1.1                     ; 1536 MB             ; 00:02:20                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 395 MB              ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.5                     ; 626 MB              ; 00:00:05                           ;
+; Total                ; 00:01:27     ; --                      ; --                  ; 00:03:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

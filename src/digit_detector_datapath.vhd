@@ -37,25 +37,41 @@ entity digit_detector_datapath is port(
 	
 	config_done				:	out	std_logic;
 	detection_done			:	out	std_logic;
-	classification			:	out 	std_logic
+	classification			:	out 	std_logic_vector(2 downto 0)
 );
 end digit_detector_datapath;
 
 architecture rtl of digit_detector_datapath is
 
 	component ram_image port(
-			address_a		: in 	std_logic_vector(15 downto 0);
-			address_b		: in 	std_logic_vector(15 downto 0);
-			clock				: in 	std_logic;
-			data_a			: in 	std_logic_vector (7 downto 0);
-			data_b			: in 	std_logic_vector (7 downto 0);
-			wren_a			: in 	std_logic;
-			wren_b			: in 	std_logic;
-			q_a				: out std_logic_vector (7 downto 0);
-			q_b				: out std_logic_vector (7 downto 0));
+			address_a	: in 	std_logic_vector (15 downto 0);
+			address_b	: in 	std_logic_vector (15 downto 0);
+			clock			: in 	std_logic  := '1';
+			data_a		: in 	std_logic_vector (3 downto 0);
+			data_b		: in 	std_logic_vector (3 downto 0);
+			wren_a		: in 	std_logic  := '0';
+			wren_b		: in 	std_logic  := '0';
+			q_a			: out std_logic_vector (3 downto 0);
+			q_b			: out std_logic_vector (3 downto 0));
 	end component;
 	
-	component ram_perceptron port(
+	component ram_perceptron01 port(
+			address	: in 	std_logic_vector(15 downto 0);
+			clock		: in 	std_logic;
+			data		: in 	std_logic_vector(15 downto 0);
+			wren		: in 	std_logic;
+			q			: out std_logic_vector(15 downto 0));
+	end component;
+	
+	component ram_perceptron02 port(
+			address	: in 	std_logic_vector(15 downto 0);
+			clock		: in 	std_logic;
+			data		: in 	std_logic_vector(15 downto 0);
+			wren		: in 	std_logic;
+			q			: out std_logic_vector(15 downto 0));
+	end component;
+	
+	component ram_perceptron12 port(
 			address	: in 	std_logic_vector(15 downto 0);
 			clock		: in 	std_logic;
 			data		: in 	std_logic_vector(15 downto 0);
@@ -116,9 +132,9 @@ architecture rtl of digit_detector_datapath is
 	
 	signal cnt_detection: integer range 0 to 65536;
 	signal address_detection : std_logic_vector(15 downto 0);
-	signal pixel_detection : std_logic_vector(7 downto 0);
-	signal perceptron_weight : std_logic_vector(15 downto 0);
-	signal aux : integer range -10000000000 to 10000000000;
+	signal pixel_detection, pixel_vga_aux, pixel_camera_aux : std_logic_vector(3 downto 0);
+	signal perceptron_weight01, perceptron_weight02, perceptron_weight12 : std_logic_vector(15 downto 0);
+	signal aux01, aux02, aux12 : integer range -100000000000 to 100000000000;
 	signal pixel_detection_black_and_white : integer range 0 to 1;
 	
 	signal lcd_message_select : std_logic_vector(1 downto 0);
@@ -135,8 +151,10 @@ begin
 					write_enable_camera_data <= '0';
 					cnt_detection <= 0;
 					detection_done <= '0';
-					aux <= 0;
-					classification <= '0';
+					aux01 <= 0;
+					aux02 <= 0;
+					aux12 <= 0;
+					classification <= "000";
 					lcd_message_select <= "00";
 					
 				when "0001"=> --WAIT_PHOTO
@@ -149,17 +167,35 @@ begin
 					if cnt_detection = 65536 then
 						cnt_detection <= 0;
 						detection_done <= '1';
-						if aux - 100000 > 0 then  --Heaviside step as activation function (biais = -100000)
-							classification <= '1';
-							lcd_message_select <= "10";
+						if aux01 + 9000 > 0 then  --Heaviside step as activation function (biais = +9000)
+							--1 beat 0
+							if aux12 - 18000 > 0 then
+								--but 2 beat 1
+								classification <= "100";
+								lcd_message_select <= "11";
+							else
+								--and 1 also beat 2
+								classification <= "010";
+								lcd_message_select <= "10";
+							end if;
 						else
-							classification <= '0';
-							lcd_message_select <= "01";
+							--0 beat 2
+							if aux02 + 30000 > 0 then
+								--but 2 beat 0
+								classification <= "100";
+								lcd_message_select <= "11";
+							else
+								--and 0 also beat 2
+								classification <= "001";
+								lcd_message_select <= "01";
+							end if;
 						end if;
 					else
 						cnt_detection <= cnt_detection + 1;
 						detection_done <= '0';
-						aux <= aux + to_integer(signed(perceptron_weight))*pixel_detection_black_and_white;
+						aux01 <= aux01 + to_integer(signed(perceptron_weight01))*pixel_detection_black_and_white;
+						aux02 <= aux02 + to_integer(signed(perceptron_weight02))*pixel_detection_black_and_white;
+						aux12 <= aux12 + to_integer(signed(perceptron_weight12))*pixel_detection_black_and_white;
 					end if;
 					
 				when others=> --SHOW_RESULT
@@ -175,21 +211,37 @@ begin
 			address_a		=> pixel_address_port_a,
 			address_b		=> pixel_address_vga,
 			clock				=> clock_25,
-			data_a			=> pixel_value_camera,
-			data_b			=> "00000000",
+			data_a			=> pixel_camera_aux,
+			data_b			=> "0000",
 			wren_a			=> write_enable_camera_data,
 			wren_b			=> '0', --port dedicated for vga read
 			q_a				=> pixel_detection,
-			q_b				=> pixel_value_vga
+			q_b				=> pixel_vga_aux
 	);
+	pixel_camera_aux <= pixel_value_camera(7 downto 4);
+	pixel_value_vga <= pixel_vga_aux&"0000";
 	pixel_detection_black_and_white <= 0 when (to_integer(unsigned(pixel_detection)) > 4*to_integer(unsigned(threshold))) else 1;
 	
-	G1: ram_perceptron port map(
+	P01: ram_perceptron01 port map(
 			address	=> address_detection,
 			clock		=> clock_25,
 			data		=> "0000000000000000",
 			wren		=> '0', --we only read perceptron weights, never write!!
-			q			=> perceptron_weight);
+			q			=> perceptron_weight01);
+			
+	P02: ram_perceptron02 port map(
+			address	=> address_detection,
+			clock		=> clock_25,
+			data		=> "0000000000000000",
+			wren		=> '0', --we only read perceptron weights, never write!!
+			q			=> perceptron_weight02);
+			
+	P12: ram_perceptron12 port map(
+			address	=> address_detection,
+			clock		=> clock_25,
+			data		=> "0000000000000000",
+			wren		=> '0', --we only read perceptron weights, never write!!
+			q			=> perceptron_weight12);
 	
 	G2: vga_interface port map(
 		clock				=> clock,

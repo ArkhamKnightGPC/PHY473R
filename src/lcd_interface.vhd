@@ -100,7 +100,7 @@ begin
 				lcd_message( 13 ) <= SP;
 				lcd_message( 14 ) <= SP;
 				lcd_message( 15 ) <= SP;
-			when "01" =>
+			when "01" => -- ZERO WINS
 				lcd_message( 0 ) <= HOME;
 				lcd_message( 1 ) <= Z;
 				lcd_message( 2 ) <= E;
@@ -117,7 +117,7 @@ begin
 				lcd_message( 13 ) <= SP;
 				lcd_message( 14 ) <= SP;
 				lcd_message( 15 ) <= SP;
-			when "10" =>
+			when "10" => -- ONE WINS
 				lcd_message( 0 ) <= HOME;
 				lcd_message( 1 ) <= O;
 				lcd_message( 2 ) <= N;
@@ -134,11 +134,11 @@ begin
 				lcd_message( 13 ) <= SP;
 				lcd_message( 14 ) <= SP;
 				lcd_message( 15 ) <= SP;
-			when others =>
+			when others => -- TWO WINS
 				lcd_message( 0 ) <= HOME;
-				lcd_message( 1 ) <= SP;
-				lcd_message( 2 ) <= SP;
-				lcd_message( 3 ) <= SP;
+				lcd_message( 1 ) <= T;
+				lcd_message( 2 ) <= W;
+				lcd_message( 3 ) <= O;
 				lcd_message( 4 ) <= SP;
 				lcd_message( 5 ) <= SP;
 				lcd_message( 6 ) <= SP;

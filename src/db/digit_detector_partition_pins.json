@@ -180,6 +180,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
 					"name" : "CMOS_SDAT",
 					"strict" : false
 				},
@@ -192,11 +196,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[17]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[16]",
+					"name" : "SW[14]",
 					"strict" : false
 				},
 				{
@@ -204,15 +204,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[14]",
+					"name" : "SW[16]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[13]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[12]",
+					"name" : "SW[17]",
 					"strict" : false
 				},
 				{
@@ -260,19 +256,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "CMOS_DATA[5]",
+					"name" : "SW[13]",
 					"strict" : false
 				},
 				{
-					"name" : "CMOS_DATA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "CMOS_DATA[2]",
-					"strict" : false
-				},
-				{
-					"name" : "CMOS_DATA[3]",
+					"name" : "SW[12]",
 					"strict" : false
 				},
 				{
